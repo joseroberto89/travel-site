@@ -28,7 +28,6 @@ Backwards Compatibility:
 
 PostCSS:
 - autoprefixer
-- gulp-postcss
 - postcss-hexrrgba
 - postcss-import
 - postcss-mixins
