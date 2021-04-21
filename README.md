@@ -5,9 +5,6 @@ Languages:
 - CSS
 - JavaScript
 
-Frameworks:
-- jQuery
-
 Methodology:
 - BEM
 - Mobile First
