@@ -1,3 +1,5 @@
+import Axios from "axios"
+
 class ClientArea {
     constructor() {
         this.injectHTML()
@@ -15,7 +17,14 @@ class ClientArea {
     }
 
     sendRequest() {
-        
+        Axios.post("https://jose-roberto-travel-site.netlify.app/.netlify/functions/secret-area", {password: this.field.value}).then(response => {
+            this.form.remove()
+            this.contentArea.innerHTML = response.data
+        }).catch(() => {
+            this.contentArea.innerHTML = `<p class="client-area__error">This Cupon is <strong>NOT VALID</strong></p>`
+            this.field.value = ""
+            this.field.focus()
+        })
     }
 
     injectHTML() {
